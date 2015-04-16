@@ -1,0 +1,43 @@
+﻿.circles-section {
+  margin: 100px auto;
+  width: 800px;
+}
+.circles-section .circle-root {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  margin: 0 14px;
+}
+.circles-section .circle-root:first-child {
+  margin-left: 0;
+}
+.circles-section .circle-root:last-child {
+  margin-right: 0;
+}
+.circles-section .circle-root svg {
+  width: 100%;
+  height: 100%;
+}
+.circles-section .circle-root svg .cover-circle {
+  fill: none;
+  stroke: #bbdbec;
+  stroke-width: 1px;
+}
+.circles-section .circle-root svg .circle-main {
+  stroke: #2b7296;
+  fill: none;
+  stroke-width: 3px;
+}
+.circles-section .circle-root .content {
+  left: 20px;
+  right: 20px;
+  top: 59px;
+  height: 35px;
+  position: absolute;
+  text-align: center;
+}
+.circles-section .circle-root .content .percent {
+  color: #2b7296;
+  font-size: 30px;
+}

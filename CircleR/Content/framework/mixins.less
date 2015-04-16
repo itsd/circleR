@@ -1,0 +1,156 @@
+﻿
+
+.radius(@radius) {
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+    -khtml-border-radius: @radius;
+}
+
+.uppercase() {
+    text-transform: uppercase;
+}
+
+.centered(@top: 0, @bottom: 0) {
+    margin: @top auto @bottom;
+}
+
+.text-centered() {
+    text-align: center;
+}
+
+.text-left() {
+    text-align: left;
+}
+
+.text-right() {
+    text-align: right;
+}
+
+.box-sizing(@sizing) {
+    -webkit-box-sizing: @sizing;
+    -moz-box-sizing: @sizing;
+    box-sizing: @sizing;
+}
+
+.radiuses(@topLeft, @topRight,@bottomLeft,@bottomRight) {
+    -moz-border-top-left-radius: @topLeft;
+    -moz-border-top-right-radius: @topRight;
+    -moz-border-bottom-left-radius: @bottomLeft;
+    -moz-border-bottom-right-radius: @bottomRight;
+    -webkit-border-top-left-radius: @topLeft;
+    border-top-left-radius: @topLeft;
+    -webkit-border-top-right-radius: @topRight;
+    border-top-right-radius: @topRight;
+    -webkit-border-bottom-left-radius: @bottomLeft;
+    border-bottom-left-radius: @bottomLeft;
+    -webkit-border-bottom-right-radius: @bottomRight;
+    border-bottom-right-radius: @bottomRight;
+    -khtml-border-top-left-radius: @topLeft;
+    -khtml-border-top-right-radius: @topRight;
+    -khtml-border-bottom-left-radius: @bottomLeft;
+    -khtml-border-bottom-right-radius: @bottomRight;
+}
+
+.rotate(@rotate) {
+    -moz-transform: rotate(@rotate);
+    -ms-transform: rotate(@rotate);
+    -o-transform: rotate(@rotate);
+    -webkit-transform: rotate(@rotate);
+    transform: rotate(@rotate);
+}
+
+.translate(@x, @y) {
+    -moz-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    -webkit-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+}
+
+.img-as-bg-image {
+    overflow: hidden;
+    position: relative;
+
+    img {
+        min-width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        .translate(-50%, -50%);
+
+        &.with-zero {
+            min-width: 0;
+            min-height: 0;
+        }
+    }
+}
+
+.backgroundSize(@bgSize) {
+    -webkit-background-size: @bgSize;
+    -moz-background-size: @bgSize;
+    -o-background-size: @bgSize;
+    background-size: @bgSize;
+}
+
+.withBackgroundFading(@color) {
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: @color;
+    }
+}
+
+.withBackgroundFadingLeftToRight() {
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, #ffffff 2%, transparent 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(2%, #ffffff), color-stop(100%, transparent));
+        background: -webkit-linear-gradient(left, #ffffff 2%, transparent 100%);
+        background: -o-linear-gradient(left, #ffffff 2%, transparent 100%);
+        background: -ms-linear-gradient(left, #ffffff 2%, transparent 100%);
+        //TODO: colors should be maintainable
+    }
+}
+
+.withBackgroundFadingRightToLeft() {
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to left, #ffffff 2%, transparent 100%);
+        background: -webkit-gradient(linear, right top, left top, color-stop(2%, #ffffff), color-stop(100%, transparent));
+        background: -webkit-linear-gradient(right, #ffffff 2%, transparent 100%);
+        background: -o-linear-gradient(right, #ffffff 2%, transparent 100%);
+        background: -ms-linear-gradient(right, #ffffff 2%, transparent 100%);
+        //TODO: colors should be maintainable
+    }
+}
+
+.transition(@property, @time) {
+    -moz-transition: @property @time;
+    -o-transition: @property @time;
+    -webkit-transition: @property @time;
+    transition: @property @time;
+}
+
+.spacing(@word, @letter) {
+    word-spacing: @word;
+    letter-spacing: @letter;
+}

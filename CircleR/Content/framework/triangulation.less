@@ -1,0 +1,44 @@
+﻿
+//Triangle with 90 corner is left and position is to bottom
+.triangleBottomLeftCorner(@height,@color) {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: @height;
+    background: url('../images/triangulation/triangle_bottom_90_left.png') @color no-repeat;
+    background-size: 100% @height;
+}
+
+//Triangle with 90 corner is right and position is to bottom
+.triangleBottomRightCorner(@height,@color) {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: @height;
+    background: url('../images/triangulation/triangle_bottom_90_right.png') @color no-repeat;
+    background-size: 100% @height;
+}
+
+//Triangle with 90 corner is right and position is to top
+.triangleTopRightCorner(@height,@color) {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: @height;
+    background: url('../images/triangulation/triangle_top_90_right.png') @color no-repeat;
+    background-size: 100% @height;
+}
+
+//Triangle with 90 corner is left and position is to top
+.triangleTopLeftCorner(@height,@color) {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: @height;
+    background: url('../images/triangulation/triangle_top_90_left.png') @color no-repeat;
+    background-size: 100% @height;
+}
